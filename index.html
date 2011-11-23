@@ -6,9 +6,40 @@
   <link href="style.css" type="text/css" rel="stylesheet" charset="utf-8">
 </head>
 <body>
-  <div id="content">
-    <h1>Just a test</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  <div id="game-content">
+    <div id="game-wrap">
+      <canvas id="game"></canvas>
+    </div>
+    <p class="description"><a href="#" id="what-is-this">What is this?</a></p>
+    <p class="description" id="remake-description" style="display: none">
+      This is a remake of the famous arcade game <a href="http://en.wikipedia.org/wiki/Space_Invaders">Space Invaders</a>. I basically developed that at the evenings of last <a href="http://fronteers.nl/congres/2011">fronteers conference</a>. It isn't perfect, and there are a lot things that could be improved. If you want to see the code, check it out on <a href="https://github.com/Calamari/homepage">github</a>.
+    </p>
   </div>
+
+  <div id="personal-info">
+    <h1>Hello...</h1>
+    <p>...my name is Georg Tavonius. I am a webdeveloper living in Hamburg, Germany.</p>
+    <p>There are already a lot sites out there, that say better who I am so I don't plan to do much with this website. That's why you  find here <span class="distraction">a distraction and</span> links to all those profiles of myself in the web I tend to update (more or less) regularly.</p>
+    <ul>
+      <li>My private life is visible on <a href="http://www.facebook.com/georg.tavonius">facebook</a>.</li>
+      <li>Parts of my professional life as profile: <a href="http://www.xing.com/profile/Georg_Tavonius">xing.com</a>.</li>
+      <li>I tweet under the name: <a href="http://twitter.com/Georg_Tavonius">@Georg_Tavonius</a></li>
+      <li>I microblog sometimes on <a href="http://blog.jaz-lounge.com/">blog.jaz-lounge.com</a>.</li>
+      <li>My open source coding stuff is on <a href="https://github.com/calamari">Github</a>.</li>
+      <li>I like photographing, which you can see on <a href="http://get83.de">get83.de</a>.</li>
+    </il>
+    <img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-snc4/41500_641515269_3177_n.jpg" alt="" width="100">
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
+  <script src="spaceinvaders.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $('#what-is-this').on('click', function(event) {
+        $('#remake-description').fadeIn();
+        event.preventDefault();
+      });
+    });
+  </script>
 </body>
 </html>
