@@ -11,9 +11,18 @@
       <canvas id="game"></canvas>
     </div>
     <p class="description"><a href="#" id="what-is-this">What is this?</a></p>
-    <p class="description" id="remake-description" style="display: none">
+    <p class="description" id="remake-description">
       This is a remake of the famous arcade game <a href="http://en.wikipedia.org/wiki/Space_Invaders">Space Invaders</a>. I basically developed that at the evenings of last <a href="http://fronteers.nl/congres/2011">fronteers conference</a>. It isn't perfect, and there are a lot things that could be improved. If you want to see the code, check it out on <a href="https://github.com/Calamari/homepage">github</a>.
     </p>
+    <p class="description flattr-line"><a class="FlattrButton" style="display:none;"
+      title="Play a game of Space Invaders"
+      data-flattr-uid="Georg_Tavonius"
+      data-flattr-tags="people, games, space invaders, webdeveloper, javascript"
+      data-flattr-category="people"
+      data-flattr-button="compact"
+      href="http://jaz-lounge.com">
+      Hello...my name is Georg Tavonius.
+    </a></p>
   </div>
 
   <div id="personal-info">
@@ -40,6 +49,17 @@
         $('#remake-description').fadeIn();
         event.preventDefault();
       });
+
+      // flattr
+      var s = document.createElement('script'),
+          t = document.getElementsByTagName('script')[0];
+
+      s.type = 'text/javascript';
+      s.async = true;
+      s.src = '//api.flattr.com/js/0.6/load.js?'+
+              'mode=auto&uid=Georg_Tavonius&language=en_GB&category=people';
+
+      t.parentNode.insertBefore(s, t);
     });
   </script>
 </body>

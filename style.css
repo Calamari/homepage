@@ -84,6 +84,9 @@ a {
   text-align: right;
   width: 500px;
 }
+.flattr-line {
+  opacity: 0.6;
+}
 
 @media all and (max-width: 970px) {
   #personal-info {
