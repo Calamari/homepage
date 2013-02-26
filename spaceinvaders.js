@@ -17,10 +17,10 @@ var ArcadeFont = {
     'C': '62,99,3,3,3,99,62',
     'D': '31,51,99,99,99,51,31',
     'E': '127,3,3,63,3,3,127',
-    'F': '63,3,3,31,3,3,3,0',
+    'F': '63,3,3,31,3,3,3',
     'G': '62,99,3,115,99,99,62',
-    'H': '99,99,99,127,99,99,99,0',
-    'I': '30,12,12,12,12,12,30,0',
+    'H': '99,99,99,127,99,99,99',
+    'I': '30,12,12,12,12,12,30',
     'J': '96,96,96,96,96,99,62',
     'K': '99,51,27,15,27,51,99',
     'L': '3,3,3,3,3,3,127',
@@ -30,7 +30,7 @@ var ArcadeFont = {
     'P': '63,99,99,99,63,3,3',
     'Q': '62,99,99,99,123,51,94',
     'R': '63,99,99,63,27,51,99',
-    'S': '62,99,3,127,96,99,62',
+    'S': '62,99,3,62,96,99,62',
     'T': '63,12,12,12,12,12,12',
     'U': '99,99,99,99,99,99,62',
     'V': '99,99,99,99,54,28,8',
@@ -38,6 +38,32 @@ var ArcadeFont = {
     'X': '99,119,62,28,62,119,99',
     'Y': '51,51,51,30,12,12,12',
     'Z': '127,112,56,28,14,7,127',
+    'a': '0,0,62,96,126,99,126',
+    'b': '3,3,3,63,99,99,63',
+    'c': '0,0,62,3,3,3,62',
+    'd': '96,96,96,126,99,99,126',
+    'e': '0,0,62,99,127,3,62',
+    'f': '56,12,30,12,12,12,12',
+    'g': '0,0,126,99,99,126,96,62',
+    'h': '3,3,3,63,99,99,99',
+    'i': '12,0,14,12,12,12,30',
+    'j': '24,0,28,24,24,24,24,14',
+    'k': '3,3,99,51,31,51,99',
+    'l': '14,12,12,12,12,12,30',
+    'm': '0,0,55,127,107,107,99',
+    'n': '0,0,31,51,51,51,51',
+    'o': '0,0,62,99,99,99,62',
+    'p': '0,0,63,99,99,63,3,3',
+    'q': '0,0,126,99,99,126,96,96',
+    'r': '0,0,31,51,3,3,3',
+    's': '0,0,62,3,62,96,63',
+    't': '12,12,30,12,12,12,56',
+    'u': '0,0,99,99,99,99,126',
+    'v': '0,0,99,99,54,28,8',
+    'w': '0,0,99,107,107,127,54',
+    'x': '0,0,99,54,28,54,99',
+    'y': '0,0,99,99,99,126,96,62',
+    'z': '0,0,127,56,28,14,127',
     ' ': '0,0,0,0,0,0,0',
     '1': '12,14,12,12,12,12,63',
     '2': '62,99,112,60,6,3,127',
@@ -48,7 +74,37 @@ var ArcadeFont = {
     '7': '127,96,48,24,12,12,12',
     '8': '62,99,99,62,99,99,62',
     '9': '62,99,99,126,96,99,62',
-    '0': '62,99,99,99,99,99,62'
+    '0': '62,99,99,99,99,99,62',
+    '(': '24,12,6,6,6,12,24',
+    ')': '6,12,24,24,24,12,6',
+    '{': '24,12,12,6,12,12,24',
+    '}': '6,12,12,24,12,12,6',
+    '<': '48,24,12,6,12,24,48',
+    '>': '3,6,12,24,12,6,3',
+    "'": '24,24,12,0,0,0,0',
+    '"': '102,102,51,0,0,0,0',
+    '.': '0,0,0,0,0,12,12',
+    '!': '12,12,12,12,0,0,12',
+    '-': '0,0,0,63,0,0,0',
+    '+': '0,12,12,63,12,12,0',
+    ',': '0,0,0,0,0,12,12,6',
+    ':': '0,12,12,0,0,12,12',
+    ';': '0,12,12,0,0,12,12,6',
+    '?': '62,99,48,24,12,0,12',
+    '$': '8,62,3,62,96,63,8',
+    '%': '67,99,48,24,12,102,98',
+    '&': '28,54,28,14,123,51,110',
+    '=': '0,0,63,0,63,0,0',
+    '_': '0,0,0,0,0,0,127',
+    '^': '8,28,54,99,0,0,0',
+    '°': '60,102,102,60,0,0,0',
+    '€': '62,99,15,3,15,99,62',
+    '#': '20,20,62,20,62,20,20',
+    '*': '0,54,28,127,28,54,0',
+    '/': '64,96,48,24,12,6,2',
+    '\\': '2,6,12,24,48,96,64',
+    '[': '30,6,6,6,6,6,30',
+    ']': '60,48,48,48,48,48,60'
   },
 
   // space between letters
@@ -150,10 +206,10 @@ var isHit = function(object) {
       objBox = object.boundingBox;
 
   if (this.y + box.height < object.y) return false;
-	if (this.y > object.y + objBox.height) return false;
+  if (this.y > object.y + objBox.height) return false;
 
-	if (this.x + box.width < object.x) return false;
-	if (this.x > object.x + objBox.width) return false;
+  if (this.x + box.width < object.x) return false;
+  if (this.x > object.x + objBox.width) return false;
   return true;
 };
 
@@ -193,15 +249,12 @@ var Text = function(canvas, text, config) {
   $.extend(this, config);
   this.element = canvas;
 
-  // here goes the bounding box in
-  this.boundingBox = {
-    width: 0, height: 0
-  };
   this.setText(text);
 };
 Text.prototype.redraw = redraw;
 Text.prototype.explode = explode;
 Text.prototype.setText = function(text) {
+  this.boundingBox = { width: 0, height: 0 };
   this.blueprint = ArcadeFont.blueprint(text.toString());
   this.redraw(true);
 };
@@ -367,6 +420,10 @@ var Game = function(canvas, config) {
       // written Texts on screen
       screenObjects = [],
       pauseText,
+      nameDisplay,
+      namePhase,
+      nameInput,
+      highscore,
 
       canon;
 
@@ -374,7 +431,7 @@ var Game = function(canvas, config) {
   start();
 
   loop();
-  
+
   function startGame() {
     scoreDisplay = new Text(canvas, score, {
       color:     '205,212,75',
@@ -435,7 +492,7 @@ var Game = function(canvas, config) {
         y:         canvas.height - 30
       });
 
-      $(window).bind('keydown keyup', keyHandler);
+      $(window).on('keydown keyup', keyHandler);
 
       /*var one = true;
       window.ondevicemotion = function(event) {
@@ -448,6 +505,13 @@ var Game = function(canvas, config) {
     if (level > 5) {
       enemyShootProbability += incEnemyShootProb;
       speed += incEnemySpeed;
+    }
+  }
+
+  function removeScreenObject(obj) {
+    var index = $.inArray(obj, screenObjects);
+    if (index > -1) {
+      screenObjects.splice(index, 1);
     }
   }
 
@@ -468,12 +532,8 @@ var Game = function(canvas, config) {
       if (doLoop) {
         lastLoopTime = new Date();
         loop();
-        $('#end-screen').hide();
         pauseText.explode(particles);
-        var index = $.inArray(pauseText, screenObjects);
-        if (index > -1) {
-          screenObjects.splice(index, 1);
-        }
+        removeScreenObject(pauseText);
       } else {
         pauseText = showText('PAUSE');
       }
@@ -490,6 +550,13 @@ var Game = function(canvas, config) {
         }));
         canonLastShot = time;
       }
+      // dont scroll down on space
+      if (!ended) {
+        event.preventDefault();
+      }
+    }
+    if (nameInput) {
+      nameInput.focus();
     }
   }
 
@@ -520,21 +587,95 @@ var Game = function(canvas, config) {
       if (index > -1) {
         screenObjects.splice(index, 1);
       }
-      ended = true;
-    }, 5000);
+//         setTimeout(function() {
+        ended = true;
+        enterHighscore();
+//          }, 500);
+    }, 3000);
+
+  }
+
+  function enterHighscore() {
+    var label = showText('Enter your name:');
+    startEnterName(function() {
+      label.explode(particles);
+      removeScreenObject(label);
+      nameDisplay.explode(particles);
+      removeScreenObject(nameDisplay);
+      sendHighscore(nameInput.val());
+    });
   }
 
   function showText(text) {
     var obj = new Text(canvas, text, {
       color:     '205,212,75',
-      pixelSize: 2,
-      x:         canvas.width / 2 - 50,
-      y:         canvas.height - 30
+      pixelSize: 2
     });
     obj.x = (canvas.width - obj.boundingBox.width) / 2;
     obj.y = (canvas.height - obj.boundingBox.height) / 2;
     screenObjects.push(obj);
     return obj;
+  }
+
+  function startEnterName(cb) {
+    nameInput = $('<input type="text" style="position:absolute;left:-9999px" id="playerName">');
+    $("body").append(nameInput);
+    nameInput.focus().on('keyup', function(event) {
+      enterName(nameInput.val());
+      if (event.which === 13) {
+        nameInput.off('keyup').remove();
+        cb();
+      }
+    });
+  }
+
+  function enterName(name) {
+    if (!nameDisplay) {
+      nameDisplay = new Text(canvas, name, {
+        color:     '205,212,75',
+        pixelSize: 2
+      });
+      nameDisplay.x = (canvas.width - nameDisplay.boundingBox.width) / 2;
+      nameDisplay.y = (canvas.height - nameDisplay.boundingBox.height) / 2 + 20;
+      screenObjects.push(nameDisplay);
+    } else {
+      nameDisplay.x = (canvas.width - nameDisplay.boundingBox.width) / 2;
+      nameDisplay.setText(name);
+    }
+    return nameDisplay;
+  }
+
+  function sendHighscore(name) {
+    highscore = new jaz.Highscore('space_invaders', 'http://85.214.144.70:8181');
+    if (name) {
+      highscore.set(name, score);
+    }
+    setTimeout(getHighscore, 50);
+  }
+
+  function getHighscore() {
+    highscore.getHighest(showHighscore);
+  }
+
+  function showHighscore(items) {
+    function writeLine(line, y) {
+      var obj = new Text(canvas, line, {
+        color:     '205,212,75',
+        pixelSize: 2,
+        y:         y
+      });
+      obj.x = (canvas.width - obj.boundingBox.width) / 2;
+      screenObjects.push(obj);
+    }
+    writeLine("HIGHSCORE", 20);
+    $.each(items, function(i, item) {
+      var line = i<9 ? '0' : '';
+      line += (i+1) + '.  ';
+      line += (item.player + '            ').slice(0,12) + ' ';
+      line += ('     ' + item.score).slice(-6);
+
+      writeLine(line, i*25 + 120);
+    });
   }
 
   function addToScore(points) {
@@ -549,7 +690,7 @@ var Game = function(canvas, config) {
     var loopTime  = new Date(),
         timeDiff  = (loopTime - lastLoopTime) / 1000, // in ms
         switchDir = false;
-    
+
     // cap time difference. So if we switch tab, we do not make that a hugh leap
     timeDiff = Math.min(50, timeDiff);
     if (timeDiff > 100) {
@@ -707,6 +848,7 @@ var Game = function(canvas, config) {
 
     lastLoopTime = loopTime;
     doLoop && window.requestAnimFrame(loop);
+//        doLoop && setTimeout(loop, 1000 / 30);
   }
 };
 
@@ -746,7 +888,6 @@ $(document).ready(function() {
     }
   });
 });
-
 /**
   TODOs:
   touchstart/move/stop events for mobile usage
