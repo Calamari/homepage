@@ -1,0 +1,21 @@
+{
+  "name": "homepage",
+  "version": "2.0.0",
+  "authors": [
+    "Calamari <g.tavonius@gmail.com>"
+  ],
+  "description": "My personal homepage",
+  "keywords": [
+    "homepage"
+  ],
+  "homepage": "http://jaz-lounge.com",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "dependencies": {
+    "terminal": "/Users/calamari/Dropbox/coding/terminal",
+    "space_invaders": "https://github.com/Calamari/space_invaders.git"
+  }
+}
