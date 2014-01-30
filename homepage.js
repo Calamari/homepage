@@ -41,8 +41,9 @@
   });
 
   Terminal.addCommand('projects', 'The projects I choose put online. If you want to know/see more, ask me.', function(args, done) {
-    var skript = new TypeScript($('#my-projects').val());
-    skript.run(this, done);
+    this.appendLine('Opening visual projects panel.');
+    done();
+    $('#visual-site').click();
   });
 
   var GAMES = {
