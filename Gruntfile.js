@@ -6,7 +6,7 @@ module.exports = function(grunt) {
         options: {
         },
         files: {
-          'style.min.css': 'style.scss'
+          'style.min.css': 'style.css'
         }
       }
     },
@@ -15,7 +15,8 @@ module.exports = function(grunt) {
         options: {
           bundleExec: true,
           style: 'expanded',
-          lineNumbers: true
+          lineNumbers: true,
+          compass: true
         },
         files: {
           'style.css': 'style.scss'

@@ -5,99 +5,99 @@ http://developer.yahoo.com/yui/license.html
 version: 3.2.0
 build: 2676
 */
-/* line 8, style.scss */
+/* line 12, style.scss */
 html {
   color: #000;
   background: #FFF;
 }
 
-/* line 8, style.scss */
+/* line 12, style.scss */
 body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td {
   margin: 0;
   padding: 0;
 }
 
-/* line 8, style.scss */
+/* line 12, style.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 8, style.scss */
+/* line 12, style.scss */
 fieldset, img {
   border: 0;
 }
 
-/* line 8, style.scss */
+/* line 12, style.scss */
 address, caption, cite, code, dfn, em, strong, th, var {
   font-style: normal;
   font-weight: normal;
 }
 
-/* line 8, style.scss */
+/* line 12, style.scss */
 li {
   list-style: none;
 }
 
-/* line 8, style.scss */
+/* line 12, style.scss */
 caption, th {
   text-align: left;
 }
 
-/* line 8, style.scss */
+/* line 12, style.scss */
 h1, h2, h3, h4, h5, h6 {
   font-size: 100%;
   font-weight: normal;
 }
 
-/* line 8, style.scss */
+/* line 12, style.scss */
 q:before, q:after {
   content: '';
 }
 
-/* line 8, style.scss */
+/* line 12, style.scss */
 abbr, acronym {
   border: 0;
   font-variant: normal;
 }
 
-/* line 8, style.scss */
+/* line 12, style.scss */
 sup {
   vertical-align: text-top;
 }
 
-/* line 8, style.scss */
+/* line 12, style.scss */
 sub {
   vertical-align: text-bottom;
 }
 
-/* line 8, style.scss */
+/* line 12, style.scss */
 input, textarea, select {
   font-family: inherit;
   font-size: inherit;
   font-weight: inherit;
 }
 
-/* line 8, style.scss */
+/* line 12, style.scss */
 input, textarea, select {
   *font-size: 100%;
 }
 
-/* line 8, style.scss */
+/* line 12, style.scss */
 legend {
   color: #000;
 }
 
-/* line 10, style.scss */
+/* line 14, style.scss */
 html {
   background: #020810;
   height: 100%;
 }
 
-/* line 15, style.scss */
+/* line 19, style.scss */
 body {
   color: #fff;
-  font-family: Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: Frutiger, "Frutiger Linotype", Univers, Calibri, "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
   line-height: 1.4em;
   height: 100%;
   font-size: 14px;
@@ -114,63 +114,63 @@ body {
   /* IE10+ */
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#000000', endColorstr='#020810',GradientType=0 );
   /* IE6-9 */
-  background: linear-gradient(top, black 0%, #020810 92%);
+  background: linear-gradient(top, #000000 0%, #020810 92%);
   /* W3C */
 }
 
-/* line 32, style.scss */
-h1, h2, h3 {
-  font-family: "minion-pro-1","minion-pro-2", "Times New Roman", Georgia, serif;
-}
-
 /* line 36, style.scss */
-h1 {
-  font-size: 24px;
-  margin-bottom: 12px;
+h1, h2, h3 {
+  font-family: "Palatino Linotype", Palatino, "minion-pro-1", "minion-pro-2", "Times New Roman", Georgia, serif;
 }
 
-/* line 41, style.scss */
+/* line 40, style.scss */
+h1 {
+  font-size: 28px;
+  margin-bottom: 14px;
+}
+
+/* line 45, style.scss */
 h2 {
   font-size: 1.15em;
 }
 
-/* line 44, style.scss */
+/* line 48, style.scss */
 ul {
   margin-bottom: 8px;
 }
 
-/* line 48, style.scss */
+/* line 52, style.scss */
 #personal-info {
   display: none;
 }
 
-/* line 52, style.scss */
+/* line 56, style.scss */
 #repl-text {
   color: #ddd;
   font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
   padding: 10px 100px 10px 10px;
 }
 
-/* line 58, style.scss */
+/* line 62, style.scss */
 #repl-text p {
   line-height: 1.4;
   margin: 0;
   min-height: 1.4em;
 }
 
-/* line 64, style.scss */
+/* line 68, style.scss */
 p {
   margin-bottom: 1.4em;
 }
 
-/* line 71, style.scss */
+/* line 75, style.scss */
 a {
-  color: #bbb;
-  font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
-  font-size: .9em;
+  color: #999;
+  font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+  font-size: 0.9em;
 }
 
-/* line 77, style.scss */
+/* line 81, style.scss */
 .my-pic {
   bottom: 0;
   position: fixed;
@@ -181,21 +181,21 @@ a {
 /**
  * Space Invaders
  */
-/* line 87, style.scss */
+/* line 91, style.scss */
 #game-content {
   position: absolute;
   left: 10px;
   top: 10px;
 }
 
-/* line 92, style.scss */
+/* line 96, style.scss */
 #game-wrap {
   background: #000;
   border: 3px double #666;
   display: inline-block;
 }
 
-/* line 97, style.scss */
+/* line 101, style.scss */
 .description {
   color: #888;
   font-size: .9em;
@@ -203,13 +203,13 @@ a {
   width: 500px;
 }
 
-/* line 103, style.scss */
+/* line 107, style.scss */
 .flattr-line {
   opacity: 0.6;
 }
 
 @media all and (max-width: 970px) {
-  /* line 108, style.scss */
+  /* line 112, style.scss */
   #personal-info {
     position: absolute;
     left: 0;
@@ -217,13 +217,13 @@ a {
     padding-right: 120px;
   }
 
-  /* line 114, style.scss */
+  /* line 118, style.scss */
   .description {
     display: none;
   }
 }
 @media all and (max-height: 430px) {
-  /* line 119, style.scss */
+  /* line 123, style.scss */
   #personal-info {
     position: absolute;
     left: 0;
@@ -231,13 +231,13 @@ a {
     padding-right: 120px;
   }
 
-  /* line 126, style.scss */
+  /* line 130, style.scss */
   #game-content,
   .distraction {
     display: none;
   }
 }
-/* line 133, style.scss */
+/* line 137, style.scss */
 .terminal .caret {
   content: '';
   display: inline-block;
@@ -248,16 +248,201 @@ a {
   margin-right: -0.2em;
   vertical-align: top;
 }
-/* line 144, style.scss */
+/* line 148, style.scss */
 .terminal .prompt {
   margin-right: 0em;
 }
 
-/* line 149, style.scss */
+/* line 153, style.scss */
 #space-invader-game {
   background: #000;
   border: 3px double #666;
   position: fixed;
   top: 10px;
   right: 10px;
+}
+
+/* line 163, style.scss */
+#visual-site {
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  background: #fefefe;
+  border-left: 1px solid #ccc;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  color: #333;
+  font-size: 16px;
+  padding: 1em;
+  position: absolute;
+  left: 0;
+  top: 0;
+  min-height: 100%;
+  width: 100%;
+}
+/* line 177, style.scss */
+#visual-site p.intro {
+  color: #999;
+  font-weight: bold;
+}
+/* line 182, style.scss */
+#visual-site > .project {
+  display: inline-block;
+  position: relative;
+  width: 300px;
+  height: 240px;
+  max-width: 100%;
+  margin: 0 32px 32px 0;
+  -webkit-perspective: 800px;
+  -moz-perspective: 800px;
+  -ms-perspective: 800px;
+  -o-perspective: 800px;
+  perspective: 800px;
+  -webkit-transition: opacity 0.4s;
+  -moz-transition: opacity 0.4s;
+  -o-transition: opacity 0.4s;
+  transition: opacity 0.4s;
+}
+/* line 193, style.scss */
+#visual-site > .project.hidden {
+  opacity: 0;
+}
+/* line 196, style.scss */
+#visual-site > .project.gone {
+  display: none;
+}
+/* line 200, style.scss */
+#visual-site > .project > .card {
+  border: 1px solid #ccc;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transition: -webkit-transform 0.7s;
+  -moz-transition: -moz-transform 0.7s;
+  -o-transition: -o-transform 0.7s;
+  transition: transform 0.7s;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+/* line 209, style.scss */
+#visual-site > .project > .card > figure {
+  background: #fff;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  display: block;
+  margin: 0;
+  padding: 16px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
+  z-index: 1;
+}
+/* line 224, style.scss */
+#visual-site > .project > .card > figure.front > img.half {
+  border-left: 1px solid #999;
+  border-top: 1px solid #999;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 150px;
+  height: 120px;
+}
+/* line 234, style.scss */
+#visual-site > .project > .card > figure.back {
+  -webkit-transform: rotateY(-180deg);
+  -moz-transform: rotateY(-180deg);
+  -ms-transform: rotateY(-180deg);
+  -o-transform: rotateY(-180deg);
+  transform: rotateY(-180deg);
+}
+/* line 238, style.scss */
+#visual-site > .project > .card > figure.dark {
+  color: #eee;
+}
+/* line 242, style.scss */
+#visual-site > .project > .card > figure.dark .tags li {
+  color: #ccc;
+}
+/* line 248, style.scss */
+#visual-site > .project > .card > figure > h2 {
+  font-family: Frutiger, "Frutiger Linotype", Univers, Calibri, "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 14px;
+}
+/* line 257, style.scss */
+#visual-site > .project > .card .tags li {
+  color: #888;
+}
+/* line 260, style.scss */
+#visual-site > .project > .card .tags li:before {
+  content: "#";
+}
+/* line 268, style.scss */
+#visual-site > .project:hover > .card, #visual-site > .project.flipped > .card {
+  -webkit-transform: rotateY(-180deg);
+  -moz-transform: rotateY(-180deg);
+  -ms-transform: rotateY(-180deg);
+  -o-transform: rotateY(-180deg);
+  transform: rotateY(-180deg);
+}
+/* line 272, style.scss */
+#visual-site > .project p {
+  margin-bottom: 1em;
+}
+/* line 276, style.scss */
+#visual-site > .project p.intro {
+  color: #999;
+}
+/* line 280, style.scss */
+#visual-site > .project strong {
+  font-weight: bold;
+}
+
+/* line 286, style.scss */
+.invis {
+  visibility: hidden !important;
+}
+
+/* line 289, style.scss */
+.right {
+  float: right;
+}
+
+/* line 294, style.scss */
+.tags.chooser > li {
+  border: 1px solid #999;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  cursor: pointer;
+  display: inline-block;
+  padding: 6px 12px;
+  margin: 0 1em 1em 0;
+}
+/* line 302, style.scss */
+.tags.chooser > li:hover {
+  background: #eee;
+}
+/* line 306, style.scss */
+.tags.chooser > li.selected {
+  background: #ccc;
 }
