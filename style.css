@@ -581,17 +581,26 @@ a {
   opacity: 1;
 }
 
-/* line 348, style.scss */
+/* line 349, style.scss */
+.is-touch #visual-site {
+  padding: 1em;
+}
+/* line 352, style.scss */
+.is-touch #visual-site > .closer {
+  display: none !important;
+}
+
+/* line 358, style.scss */
 .invis {
   visibility: hidden !important;
 }
 
-/* line 351, style.scss */
+/* line 361, style.scss */
 .right {
   float: right;
 }
 
-/* line 356, style.scss */
+/* line 366, style.scss */
 .tags.chooser > li {
   border: 1px solid #999;
   -webkit-border-radius: 3px;
@@ -604,11 +613,11 @@ a {
   padding: 6px 12px;
   margin: 0 1em 1em 0;
 }
-/* line 364, style.scss */
+/* line 374, style.scss */
 .tags.chooser > li:hover {
   background: #eee;
 }
-/* line 368, style.scss */
+/* line 378, style.scss */
 .tags.chooser > li.selected {
   background: #ccc;
 }

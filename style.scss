@@ -345,6 +345,16 @@ a {
   }
 }
 
+.is-touch {
+  #visual-site {
+    padding: 1em;
+
+    > .closer {
+      display: none !important;
+    }
+  }
+}
+
 .invis {
   visibility: hidden !important;
 }

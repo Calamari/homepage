@@ -1,17 +1,30 @@
 $(function() {
   'use strict';
 
+  // It's an oversimplifaction
+  var IS_TOUCH = ('ontouchstart' in window) || window.DocumentTouch && document instanceof DocumentTouch;
+
   // That's so not object oriented. Kind of fun.
   var visualSitePanel = $('#visual-site'),
       panelIsVisible  = false,
-      terminal        = new Terminal('#repl-text', {
-        onStart: function() {
-          console.log(this, terminal);
-          this.evalInput('intro');
-        }
-      });
+      terminal;
+
+  if (!IS_TOUCH) {
+    terminal = new Terminal('#repl-text', {
+      onStart: function() {
+        this.evalInput('intro');
+      }
+    });
+  } else {
+    visualSitePanel
+      .removeClass('slide-out')
+      .removeClass('allow-wobble');
+    $('html').addClass('is-touch');
+  }
 
   function checkTerminalControl() {
+    if (IS_TOUCH) { return; }
+
     if (panelIsVisible) {
       terminal.disable();
     } else {
@@ -21,6 +34,8 @@ $(function() {
   }
 
   function openProjectsPanel() {
+    if (IS_TOUCH) { return; }
+
     if (visualSitePanel.hasClass('slide-out')) {
       visualSitePanel.removeClass('slide-out');
       visualSitePanel.removeClass('allow-wobble');
@@ -29,6 +44,8 @@ $(function() {
     }
   }
   function closeProjectsPanel() {
+    if (IS_TOUCH) { return; }
+
     visualSitePanel.addClass('slide-out');
     setTimeout(function() {
       if (visualSitePanel.hasClass('slide-out')) {
@@ -114,14 +131,6 @@ $(function() {
       $(visibleProjects).removeClass('gone').removeClass('hidden');
       $(hiddenProjects).addClass('hidden');
       hideElementsCompletely(hiddenProjects);
-
-      // allProjects.addClass('hidden');
-      // selectedLi.each(function(i, li) {
-      //   var tag = li.innerHTML;
-      //   $.each(tags[tag].projects, function(i, tagLi) {
-      //     $(tagLi).removeClass('hidden');
-      //   });
-      // });
     } else {
       allProjects.removeClass('hidden').removeClass('gone');
     }
