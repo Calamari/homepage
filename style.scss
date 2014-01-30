@@ -1,6 +1,19 @@
+@import 'bower_components/bourbon/app/assets/stylesheets/bourbon.scss';
+
 $font-header: 'Palatino Linotype', Palatino, 'minion-pro-1', 'minion-pro-2', 'Times New Roman', Georgia, serif;
 $font-body: Frutiger, 'Frutiger Linotype', Univers, Calibri, 'Myriad Pro', Myriad, 'DejaVu Sans Condensed', 'Liberation Sans', 'Nimbus Sans L', Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
 $font-mono: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+
+
+// Wobble animation
+@include keyframes(wobble-out) {
+  0% { @include transform(translateX(95%)); }
+  20% { @include transform(translateX(92%)); }
+  40% { @include transform(translateX(95%)); }
+  60% { @include transform(translateX(92%)); }
+  100% { @include transform(translateX(95%)); }
+}
+
 
 /*
 Copyright (c) 2010, Yahoo! Inc. All rights reserved.
@@ -13,6 +26,7 @@ html{color:#000;background:#FFF;}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pr
 
 html {
   background: #020810;
+  overflow: hidden;
   height: 100%;
 }
 
@@ -167,12 +181,15 @@ a {
   @include box-sizing(border-box);
   color: #333;
   font-size: 16px;
-  padding: 1em;
+  overflow-y: scroll;
+  padding: 1em 1em 1em 3em;
   position: absolute;
   left: 0;
   top: 0;
-  min-height: 100%;
+  height: 100%;
   width: 100%;
+
+  @include transition(all 0.4s);
 
   p.intro {
     color: #999;
@@ -279,6 +296,51 @@ a {
 
     strong {
       font-weight: bold;
+    }
+  }
+
+  &.slide-out {
+    @include transform(translateX(95%));
+    opacity: 0.5;
+
+    &:before {
+      content: " ";
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: 2;
+    }
+
+    > .closer {
+      display: none;
+    }
+  }
+
+  &.allow-wobble {
+    &:hover {
+      opacity: 1;
+      @include animation(wobble-out 0.6s);
+    }
+  }
+
+  > .closer {
+    @include transition(opacity 0.3s);
+    background-color: #333;
+    content: " ";
+    cursor: pointer;
+    display: block;
+    width: 2em;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    opacity: 0.2;
+
+    &:hover {
+      opacity: 1;
     }
   }
 }

@@ -81,9 +81,8 @@
       <li>Make some <a href="http://www.creative-screenshot.com/">creative screenshots</a></li>
     </il>
   </div>
-    <img src="https://2.gravatar.com/avatar/6b4b7f11163b1e87571995ce8c3f0bce?d=https%3A%2F%2Fidenticons.github.com%2F4b4e999a382d77119bb91ce2a3572f6a.png&r=x&s=100" alt="A picture of me" class="my-pic">
 
-  <div id="visual-site">
+  <div id="visual-site" class="slide-out allow-wobble">
     <h1>My Projects</h1>
     <p class="intro">This is not an exhaustive list of my projects. It's just for giving a quick idea what I do in my spare time.</p>
 
@@ -311,6 +310,7 @@
       </div>
     </div>
 
+    <span class="closer"></span>
   </div>
 
   <script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
@@ -322,6 +322,23 @@
   <script src="homepage.js"></script>
   <script>
     $(function() {
+      var visualSitePanel = $('#visual-site');
+      visualSitePanel.on('click', function() {
+        if (visualSitePanel.hasClass('slide-out')) {
+          visualSitePanel.removeClass('slide-out');
+          visualSitePanel.removeClass('allow-wobble');
+        }
+      });
+      visualSitePanel.on('click', '.closer', function(event) {
+        visualSitePanel.addClass('slide-out');
+        setTimeout(function() {
+          if (visualSitePanel.hasClass('slide-out')) {
+            visualSitePanel.addClass('allow-wobble');
+          }
+        }, 400);
+        event.stopPropagation();
+      });
+
       // Tagging stuff of projects
       var tags        = {},
           allLi       = $('#visual-site .project .tags li'),
@@ -401,7 +418,6 @@
         onSelectionChange();
       });
 
-      return; // TODO: disable terminal when visual is open (it scrolls unvoluntarily)
       var terminal = new Terminal('#repl-text', {
         onStart: function() {
           this.evalInput('intro');

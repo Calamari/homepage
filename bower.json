@@ -17,5 +17,8 @@
   "dependencies": {
     "terminal": "/Users/calamari/Dropbox/coding/terminal",
     "space_invaders": "https://github.com/Calamari/space_invaders.git"
+  },
+  "devDependencies": {
+    "bourbon": "~3.1.8"
   }
 }
