@@ -322,11 +322,30 @@
   <script src="homepage.js"></script>
   <script>
     $(function() {
-      var visualSitePanel = $('#visual-site');
+      var visualSitePanel = $('#visual-site'),
+          panelIsVisible  = false,
+          terminal        = new Terminal('#repl-text', {
+            onStart: function() {
+              console.log(this, terminal);
+              this.evalInput('intro');
+            }
+          });
+
+      function checkTerminalControl() {
+        if (panelIsVisible) {
+          terminal.disable();
+        } else {
+          terminal.enable();
+          terminal.focus();
+        }
+      }
+
       visualSitePanel.on('click', function() {
         if (visualSitePanel.hasClass('slide-out')) {
           visualSitePanel.removeClass('slide-out');
           visualSitePanel.removeClass('allow-wobble');
+          panelIsVisible = true;
+          checkTerminalControl();
         }
       });
       visualSitePanel.on('click', '.closer', function(event) {
@@ -334,6 +353,8 @@
         setTimeout(function() {
           if (visualSitePanel.hasClass('slide-out')) {
             visualSitePanel.addClass('allow-wobble');
+            panelIsVisible = false;
+            checkTerminalControl();
           }
         }, 400);
         event.stopPropagation();
@@ -416,12 +437,6 @@
       tagChooser.on('click', 'li', function clickHandler(event) {
         $(event.currentTarget).toggleClass('selected');
         onSelectionChange();
-      });
-
-      var terminal = new Terminal('#repl-text', {
-        onStart: function() {
-          this.evalInput('intro');
-        }
       });
     });
   </script>
