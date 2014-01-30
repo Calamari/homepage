@@ -12,7 +12,7 @@ $(function() {
   if (!IS_TOUCH) {
     terminal = new Terminal('#repl-text', {
       onStart: function() {
-        this.evalInput('intro');
+        this.evalInput('intro', true);
       }
     });
   } else {
