@@ -3,7 +3,6 @@
 
   Terminal.addCommand('todos', 'Shows the TODOs of my homepage. (Not an exhaustive list, of course.)', function(args, done) {
     this.appendLine('I might do the following things:');
-    this.appendLine('- Play command, so we can play a game of space invaders');
     this.appendLine('- On failed command, suggest existing similar ones');
     this.appendLine('- Colors');
     this.appendLine('- Images and Videos in the terminal (Comics and stuff)');
