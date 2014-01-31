@@ -2,7 +2,7 @@
   'use strict';
 
   // TODO: parse the version from package.json into here
-  var VERSION = '0.1.0';
+  var VERSION = '$VERSION$';
 
   Terminal.addCommand('todos', 'Shows the TODOs of my homepage. (Not an exhaustive list, of course.)', function(args, done) {
     this.appendLine('I might do the following things:');
@@ -19,6 +19,7 @@
     this.appendLine('- Saving and Viewing Comments / Mails');
     done();
   });
+  Terminal.addCommand('todo', 'todos');
 
   Terminal.addCommand('intro', 'Plays my intro scripts, you already have seen.', function(args, done) {
     var skript = new TypeScript($('#intro-script').val());
@@ -75,7 +76,7 @@
       if (win.SpaceInvaders) {
         startSpaceInvaders();
       } else {
-        Terminal.utils.loadFile('bower_components/space_invaders/spaceinvaders.js', function(err) {
+        Terminal.utils.loadFile('js/space_invaders.min.js', function(err) {
           if (err) {
             terminal.appendLine('Could not load game files.');
             done();
