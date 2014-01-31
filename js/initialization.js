@@ -13,6 +13,11 @@ $(function() {
     terminal = new Terminal('#repl-text', {
       onStart: function() {
         this.evalInput('intro', true);
+      },
+      onError: function() {
+        console.log("Error happened", arguments);
+        this.appendLine('Something bad happened!');
+        this.prompt();
       }
     });
   } else {
