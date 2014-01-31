@@ -1,6 +1,9 @@
 (function(win, doc, $) {
   'use strict';
 
+  // TODO: parse the version from package.json into here
+  var VERSION = '0.1.0';
+
   Terminal.addCommand('todos', 'Shows the TODOs of my homepage. (Not an exhaustive list, of course.)', function(args, done) {
     this.appendLine('I might do the following things:');
     this.appendLine('- On failed command, suggest existing similar ones');
@@ -93,6 +96,11 @@
       this.appendLine('Possible games: ' + Object.keys(GAMES).join(', '));
       done();
     }
+  });
+
+  Terminal.addCommand('version', 'Returns homepage version', function(args, done) {
+    this.appendLine('Homepage-version v' + VERSION);
+    done();
   });
 
   // Tracking of all commands via google analytics
