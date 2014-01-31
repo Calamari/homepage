@@ -15,7 +15,7 @@
     "bower_components"
   ],
   "dependencies": {
-    "terminal": "/Users/calamari/Dropbox/coding/terminal",
+    "terminal": "https://github.com/Calamari/terminal.js.git",
     "space_invaders": "https://github.com/Calamari/space_invaders.git"
   },
   "devDependencies": {
