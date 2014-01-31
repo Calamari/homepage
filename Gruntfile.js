@@ -55,6 +55,9 @@ module.exports = function(grunt) {
           'js/space_invaders.min.js': [
             'bower_components/space_invaders/spaceinvaders.js',
             'bower_components/space_invaders/highscore.js'
+          ],
+          'js/bandage.min.js': [
+            'js/vendor/bandage.js'
           ]
         }
       }
