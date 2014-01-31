@@ -96,5 +96,17 @@
     }
   });
 
+  // Tracking of all commands via google analytics
+  Terminal.addCommand({
+    test: function(cmd, args) {
+      if (ga) {
+        ga('set', 'dimension1', cmd + ' ' + args);
+        ga('send', 'dimension1');
+      }
+      return false;
+    },
+    run: function(done) { done(); }
+  });
+
   win.Terminal = Terminal;
 }(window, document, jQuery));
