@@ -7,6 +7,7 @@ $(function() {
   // That's so not object oriented. Kind of fun.
   var visualSitePanel = $('#visual-site'),
       panelIsVisible  = false,
+      imagesLoaded    = false,
       terminal;
 
   if (!IS_TOUCH) {
@@ -46,6 +47,18 @@ $(function() {
       visualSitePanel.removeClass('allow-wobble');
       panelIsVisible = true;
       checkTerminalControl();
+
+      if (!imagesLoaded) {
+        visualSitePanel.find('[bg-src]').each(function(i, elem) {
+          elem = $(elem);
+          elem.css('background', 'url(' + elem.attr('bg-src') + ')');
+        });
+        visualSitePanel.find('[img-src]').each(function(i, elem) {
+          elem = $(elem);
+          elem.attr('src', elem.attr('img-src'));
+        });
+        imagesLoaded = true;
+      }
     }
   }
   function closeProjectsPanel() {
