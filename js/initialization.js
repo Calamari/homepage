@@ -49,13 +49,13 @@ $(function() {
       checkTerminalControl();
 
       if (!imagesLoaded) {
-        visualSitePanel.find('[bg-src]').each(function(i, elem) {
+        visualSitePanel.find('[data-bg-src]').each(function(i, elem) {
           elem = $(elem);
-          elem.css('background', 'url(' + elem.attr('bg-src') + ')');
+          elem.css('background', 'url(' + elem.attr('data-bg-src') + ')');
         });
-        visualSitePanel.find('[img-src]').each(function(i, elem) {
+        visualSitePanel.find('[data-img-src]').each(function(i, elem) {
           elem = $(elem);
-          elem.attr('src', elem.attr('img-src'));
+          elem.attr('src', elem.attr('data-img-src'));
         });
         imagesLoaded = true;
       }
